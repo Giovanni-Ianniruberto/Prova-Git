@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+	Quando si crea un nuovo progetto, eclipse ci fornisce già una parte di codice in questa sezione
+	del progetto. Nel file qui presente troviamo una parte di contenuti che ci consentono di strutturare
+	a nostro piacere la parte grafica della applicazione. Se in quest'ultima sono presenti più Activity
+	sarà necessario creare un nuovo file xml, contenuto sempre nella cartella res/layout, così da
+	impostare la grafica di quella Activity appena creata. 
+	Ci viene in aiuto nella creazione della struttura grafica di una Activity, il Graphical Layout,
+	che ci consente appunto di trascinare elementi grafici (bottoni, barre di testo e altro) attraverso 
+	un'interfaccia grafica. 
+ -->
+ 
+ <!-- 
+ 	Il layout ci consente di disporre gli elemenenti grafici attraverso diversi tipi di layout. Nella 
+ 	generazione automatica di codice è impostato un linearlayout che, come dice il nome, dispone oggetti
+ 	in sequenza, in questo caso in verticale.
+--> 
+<!-- 
+	Le righe di codice "android: " permettono di impostare le caratteristiche dell'oggetto come
+	per esempio la dimensione android:layout_width e android:layout_height seguite dai parametri 
+	"fill_parent" con il significato di riempire, in questo caso, tutto lo schermo del dispositivo.
+	Ci sono molte altre impostazioni e diversi altri tipi di parametri in modo da avere una libertà 
+	totale sulla disposizione (e non solo) degli oggetti. 
+-->
+<!--
+	 @string/hello = indica un riferimento alla risorsa string (situata nella cartella values del 
+	 progetto android) avente una chiave di nome hello e ne legge il contenuto (valore della chiave)
+ -->
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<!--
+	 Il TextView è un componente di tipo View che permette di inserire del testo 
+	 (android:text="@string/hello") e di visualizzarlo nella activity.
+ -->   
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	L'AndroidManifest è un file di configurazione, generato automaticamente, che descrive
+	l'applicazione definendone i contenuti. Ogni progetto ne deve possedere uno e possiede le
+	informazioni di sistema relative all'applicazione.  
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ser.pillade"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+<!--
+	Nell'application sono gestite le activity e i servizi che fanno parte dell'applicazione, precedute
+	da due righe di codice che indicano l'icona e il nome dell'app. che apparirà nella home del tel. 
+ -->
+ <!--
+ 	L'activity si può interpretare come ad una schermata (intefaccia grafica) dell'applicazione. 
+ 	Tutte le attività devono essere rappresentate da elementi <activity> quindi dichiarati nel file 
+ 	manifest, altrimenti quelle activity che non vengono dichiarate non saranno viste dal sistema e 
+ 	qiundi non verrano mai eseguite dall'applicazione. Le activity si distinguono da un nome e
+ 	possiedono un label (titolo in alto sullo schermo) e sarà gestita dal file .java relativo all'
+ 	activity stessa
+  -->
+  <!--
+  	L'intent indica la volontà di un componente (Activity) di eseguire una particolare azione su un 
+  	determinato insieme di dati
+   -->
+  <!--
+  	L'intent-filter è la dichiarazione che l'activity è in grado di soddisfare (gestire) un'intent 
+  	In questo caso l'azione è quella di	soddisfare l'azione MAIN 
+  	(action android:name="android.intent.action.MAIN") della categoria LAUNCHER
+   -->
+  
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".HelloWorldActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
