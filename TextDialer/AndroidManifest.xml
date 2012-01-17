@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ser.pillade.esercitazione.tre"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+<!-- Un'Activity per accedere ad una particolare applicazione attraverso un intent deve dichiarare
+l'utilizzo di questa risorsa con l'utilizzo di una funzionalità che è il permission, ovvero in questo
+caso la nostra activity deve iniziare una chiamata telefonica, per fare questa operazione si deve
+dichiarare nel manifest il relativo permission (CALL_PHONE: permette di iniziare una chiamata senza passare per
+l'interfaccia Dialer, il quale ha bisogno della conferma dell'utente per iniziare la chiamata)  --> 
+   
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".TextDialerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
